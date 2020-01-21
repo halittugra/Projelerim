@@ -10,7 +10,7 @@ public class ScrappingLinks {
         URL pageLocation = new URL(address);
         Scanner scn = new Scanner(pageLocation.openStream());
         
-        while(in.hasNext()){
+        while(scn.hasNext()){
             String line = scn.next();
             if(line.contains("href=\"http://") || line.contains("href=\"https://")){
                 int basla = line.indexOf("\"");
